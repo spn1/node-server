@@ -1,0 +1,8 @@
+{
+  "log_level": 3,
+  "file_prefix": "Logi_",
+  "rolling_config": {
+    "size_threshold": 1024,
+    "time_threshold": 3600
+  }
+}
