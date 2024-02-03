@@ -5,7 +5,8 @@ const logger = Logger.with_config(
   LogConfig.from_file("./config/log_config.json")
 );
 
-console.log("Logger: ", logger);
-console.log("Prefix: ", logger.file_prefix);
-console.log("Level: ", logger.level);
-console.log("Thresholds: ", logger.time_threshold, logger.size_threshold);
+logger.debug("Refreshingly");
+logger.info("Unconcerned");
+logger.warn("With the Vulgar");
+logger.error("Exigencies of");
+logger.critical("Veracity");
