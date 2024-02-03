@@ -1,5 +1,5 @@
 {
-  "log_level": 3,
+  "level": 3,
   "file_prefix": "Logtar_",
   "rolling_config": {
     "size_threshold": 1024,
