@@ -1,12 +1,18 @@
-const config = require("./config/log_config");
+const path = require("node:path");
 const { Logger, LogConfig } = require("./lib/logtar");
 
-const logger = Logger.with_config(
-  LogConfig.from_file("./config/log_config.json")
-);
+async function initialize_logger() {
+  let logger = Logger.with_config(
+    LogConfig.from_file(path.join(__dirname, "config", "logger.json"))
+  );
+  await logger.init();
 
-logger.debug("Refreshingly");
-logger.info("Unconcerned");
-logger.warn("With the Vulgar");
-logger.error("Exigencies of");
-logger.critical("Veracity");
+  return logger;
+}
+
+async function main() {
+  const logger = await initialize_logger();
+  logger.error("ERROR MESSAGE");
+}
+
+main();
