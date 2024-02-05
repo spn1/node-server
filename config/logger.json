@@ -2,7 +2,7 @@
   "level": 3,
   "file_prefix": "Logtar_",
   "rolling_config": {
-    "size_threshold": 1024,
-    "time_threshold": 86400
+    "size_threshold": 20480,
+    "time_threshold": 5
   }
 }
